@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3aa73861-ea51-4a41-9201-f6915ba6ea03" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/functions/sounds/final-song/final.wav" beforeDir="false" afterPath="$PROJECT_DIR$/backend/functions/sounds/final-song/final.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/functions/sounds/position-sounds/double up pump.wav" beforeDir="false" />
-    </list>
+    <list default="true" id="3aa73861-ea51-4a41-9201-f6915ba6ea03" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +25,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backend/functions/makeMusic.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="103" selection-start-line="103" selection-end-line="103" />
+            <state relative-caret-position="340">
+              <caret line="102" column="52" selection-start-line="102" selection-start-column="52" selection-end-line="102" selection-end-column="52" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -155,6 +151,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.019828156" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -190,8 +187,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/functions/makeMusic.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="103" selection-start-line="103" selection-end-line="103" />
+        <state relative-caret-position="340">
+          <caret line="102" column="52" selection-start-line="102" selection-start-column="52" selection-end-line="102" selection-end-column="52" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
