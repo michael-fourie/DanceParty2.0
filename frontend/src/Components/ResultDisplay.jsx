@@ -1,0 +1,40 @@
+import React from 'react'
+import Table from "@material-ui/core/Table"
+import TableBody from "@material-ui/core/TableBody"
+import TableCell from "@material-ui/core/TableCell"
+import TableContainer from "@material-ui/core/TableContainer"
+import TableHead from "@material-ui/core/TableHead"
+import TableRow from "@material-ui/core/TableRow"
+import Paper from "@material-ui/core/Paper"
+import { RotateWithOffset } from '@tensorflow/tfjs'
+
+
+function ResultDisplay(props) {
+
+    let { data } = props;
+    
+    return(
+        <TableContainer component={Paper}>
+            <Table className={} size="small">
+                <TableHead>
+                    <TableRow>
+                        <TableCell>Pose</TableCell>
+                        <TableCell>Time Stamp</TableCell>
+                    </TableRow>
+                </TableHead>
+                <TableBody>
+                    {data.map((dat, index) => {
+                        <TableRow key={index}>
+                            <TableCell component="th" scope="row">
+                                {dat.pose}
+                            </TableCell>
+                            <TableCell>
+                                {dat.timeStamp}
+                            </TableCell>
+                        </TableRow>
+                    })}
+                </TableBody>
+            </Table>
+        </TableContainer>
+    )
+}
