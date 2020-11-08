@@ -98,7 +98,9 @@ def correctDrumLoop(drumLoop, timeOfDance):
             curTime += timeOfDrumLoop
             numRepeat += 1
 
-    drumLoopCorrected = drumLoop * numRepeat
+
+    drumLoopTemp = drumLoop * numRepeat
+    drumLoopCorrected = drumLoopTemp[:timeOfDanceSeconds]
 
     return drumLoopCorrected
 
