@@ -57,6 +57,7 @@ function RecordComponent(props) {
 
     const [isRecording, setIsRecording] = useState(false);
     const [videoStream, setVideoStream] = useState();
+    const [uploadAvailable, setUploadAvailable] = useState(false);
 
     const [isCamera, setIsCamera] = useState(false);
     const [fileReady, setFileReady] = useState(false);
@@ -235,6 +236,9 @@ function RecordComponent(props) {
             let aud = document.getElementById('audio');
             let audio = new Blob([res.data], { type: 'audio/wav' });
             let url = window.URL.createObjectURL(audio);
+            let blb = new Blob(recordedChunks, { type: "video/webm" });
+            let vidUrl = window.URL.createObjectURL(blb);
+            console.log(vidUrl);
 
             // let link = document.getElementById('dload');
 
@@ -247,8 +251,10 @@ function RecordComponent(props) {
             console.log(url);
             aud.srcObject = null;
             aud.src = url;
-            video.autoPlay = true;
+            // video.srcObject = null;
+            // video.src = url;
             setFileReady(true);
+            setUploadAvailable(true);
             
         })
         .catch(err => console.log(err));
@@ -261,18 +267,19 @@ function RecordComponent(props) {
         <Grid container xs={12} direction="column" spacing={2}>
             <Paper className={classes.control}>
             <Grid item xs={12}>
-                {
-                    !videoLoading ? (
-                        <video id="vid" autoPlay controls>
+               
+                        <video id="vid" autoPlay loop>
 
                         </video>
 
-                    ) :( "" )
-                }
                 
-                <audio id="audio" autoPlay loop>
+                
+            </Grid>
+            <Grid item xs={12}>
+            <audio id="audio" autoPlay loop>
 
-                </audio>
+            </audio>
+
             </Grid>
             <Grid item container xs={12} align="center">
                 <Grid item xs={3}>
@@ -293,7 +300,11 @@ function RecordComponent(props) {
             </Grid>
             <Grid item xs={12}>
                 
-                    
+                    {
+                        uploadAvailable ? (
+                            <ResultDisplay pos={moves.pos} time={moves.time} />
+                        ) : ("")
+                    }
                     
                 
             </Grid>

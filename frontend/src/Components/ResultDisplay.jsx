@@ -13,16 +13,34 @@ function ResultDisplay(props) {
 
     let { pos, time } = props;
 
-    const [data, setData] = useState();
+    const [data, setData] = useState([]);
+    const [dataReady, setDataReady] = useState(false);
     useEffect(() => {
-        
-    })
+
+        console.log(props);
+        console.log(pos);
+       
+
+        let temp = pos.map((pos, index) => {
+            return {
+                pose: pos,
+                timeStamp: time[index]
+            }
+        });
+
+        setData([...temp]);
+        setDataReady(true);
+    }, [props]);
+
+
 
 
     
     return(
+        
         <TableContainer component={Paper}>
             <Table  size="small">
+                {console.log(data)}
                 <TableHead>
                     <TableRow>
                         <TableCell>Pose</TableCell>
@@ -30,18 +48,21 @@ function ResultDisplay(props) {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {data.map((dat, index) => {
+                    {data.map((dat, index) => 
+                         (
                         <TableRow key={index}>
-                            <TableCell component="th" scope="row">
+                            <TableCell scope="row">
                                 {dat.pose}
                             </TableCell>
                             <TableCell>
-                                {dat.timeStamp}
+                                {dat.timeStamp / 1000} Seconds
                             </TableCell>
                         </TableRow>
-                    })}
+                    ))}
                 </TableBody>
             </Table>
         </TableContainer>
     )
 }
+
+export default ResultDisplay;
