@@ -6,7 +6,7 @@ import Grid from "@material-ui/core/Grid"
 import { makeStyles } from "@material-ui/core/styles"
 import Paper from "@material-ui/core/Paper"
 
-
+import ResultDisplay from "./ResultDisplay"
 
 import Table from "@material-ui/core/Table"
 import TableBody from "@material-ui/core/TableBody"
@@ -67,6 +67,7 @@ function RecordComponent(props) {
     
 
     const [videoLoading, setVideoLoading] = useState(false);
+    
     
 
     //Called once recording is done
@@ -293,15 +294,7 @@ function RecordComponent(props) {
             <Grid item xs={12}>
                 
                     
-                        {/* <video id="playback" autoPlay loop>
-                            
-                        </video> */}
-
-                        
-
-                        
                     
-                        {/* <a id="dload">Download</a> */}
                 
             </Grid>
             </Paper>

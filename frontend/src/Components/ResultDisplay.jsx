@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Table from "@material-ui/core/Table"
 import TableBody from "@material-ui/core/TableBody"
 import TableCell from "@material-ui/core/TableCell"
@@ -11,11 +11,18 @@ import { RotateWithOffset } from '@tensorflow/tfjs'
 
 function ResultDisplay(props) {
 
-    let { data } = props;
+    let { pos, time } = props;
+
+    const [data, setData] = useState();
+    useEffect(() => {
+        
+    })
+
+
     
     return(
         <TableContainer component={Paper}>
-            <Table className={} size="small">
+            <Table  size="small">
                 <TableHead>
                     <TableRow>
                         <TableCell>Pose</TableCell>
